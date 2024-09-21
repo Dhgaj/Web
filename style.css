@@ -1,0 +1,152 @@
+/* 全局样式重置和基础设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* body元素的样式 */
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    color: white;
+}
+
+/* body元素的背景图片设置 */
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('123.jpeg');
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* .wrapper容器的样式 */
+.wrapper {
+    width: 490px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ffffff80;
+    backdrop-filter: blur(8px);
+}
+
+/* 表单样式 */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 标题h2的样式 */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1a877c;
+}
+
+/* 输入字段容器的样式 */
+.input-field {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+}
+
+/* 输入字段标签的样式 */
+.input-field label {
+    position: absolute;
+    color: green;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1.6px;
+    pointer-events: none;
+    transition: .15s ease;
+}
+
+/* 输入字段的样式 */
+.input-field input {
+    width: 100%;
+    height: 40px;
+    color: #1a877c;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+/* 输入字段聚焦和有效状态下标签的样式 */
+.input-field input:focus~label,
+.input-field input:valid~label {
+    font-size: .8rem;
+    top: 10px;
+    transform: translateY(-120%);
+}
+
+/* 忘记密码部分的样式 */
+.forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: pink;
+}
+
+/* 记住我复选框的样式 */
+#remember {
+    accent-color: #fff;
+    /* accent-color: pink; */
+}
+
+/* 忘记密码标签的样式 */
+.forget label {
+    display: flex;
+    align-items: center;
+}
+
+/* 忘记密码标签内段落的样式 */
+.forget label p {
+    margin-left: 8px;
+}
+
+/* 链接样式 */
+.wrapper a {
+    /* color: #fff; */
+    color: pink;
+    text-decoration: underline;
+}
+
+
+/* 按钮样式 */
+button {
+    background: #4e9f89;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: .3s ease;
+}
+
+/* 注册部分的样式 */
+.register {
+    text-align: center;
+    margin: 30px;
+    color: rgb(166, 121, 128);
+}
+
+/* 注册部分内链接的样式 */
+.register a {
+    color: rgb(166, 121, 128);
+    /* 修改 .register 内部链接的颜色 */
+}
